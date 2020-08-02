@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Heestagram</title>
+        <link rel="stylesheet" href="{% static 'posts/style.css' %}" type="tet/css"/>
+    </head>
+
+    <body>
+        <h1>Posts</h1>
+        {% if posts %}
+            <ul>
+                {% for post in posts %}
+                    <li> {{ posts }} </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No Posts.</p>
+        {% endif %}
+    </body>
+</html>
